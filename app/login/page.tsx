@@ -25,14 +25,14 @@ export default function LoginPage() {
                 </p>
                 <div className="space-y-4">
                     <button
-                        onClick={() => signIn("google", { callbackUrl: "/api/auth/signin" })}
+                        onClick={() => signIn("google")}
                         className="w-full px-6 py-3 text-white bg-[#FE2C55] rounded-full hover:bg-[#FF004F] transition-colors duration-300 font-medium text-lg flex items-center justify-center gap-2"
                     >
                         <img src="./images/google-logo.png" alt="Google" className="w-5 h-5" />
                         Login with Google
                     </button>
                     <button
-                        onClick={() => signIn("google", { callbackUrl: "/api/auth/signup" })}
+                        onClick={() => signIn("google")}
                         className="w-full px-6 py-3 text-white bg-transparent border-2 border-[#FE2C55] rounded-full hover:bg-[#FE2C55]/10 transition-colors duration-300 font-medium text-lg flex items-center justify-center gap-2"
                     >
                         <img src="./images/google-logo.png" alt="Google" className="w-5 h-5" />
