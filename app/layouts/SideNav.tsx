@@ -51,6 +51,7 @@ export default function SideNav() {
 
           <Link
             href="/upload"
+            // if not session, redirect to login page            
             className={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-white ${
               pathname === "/upload" ? "font-bold" : ""
             }`}
@@ -69,16 +70,16 @@ export default function SideNav() {
               <span>Profile</span>
             </Link>
           ) : (
-            <button
-              onClick={() => signIn()} // Redirect to login page
+            <Link
+              href="/login"
               className={`flex items-center gap-2 px-4 py-2 bg-[#FE2C55] hover:bg-[#FE2C55]/80 text-white rounded-lg ${
                 pathname === "/login" ? "font-bold" : ""
               }`}
             >
               <span>Login</span>
-            </button>
+            </Link>
           )}
-
+        </div>
           {/* Logout button (only shown when logged in) */}
           {session && (
             <button
@@ -90,6 +91,6 @@ export default function SideNav() {
           )}
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
